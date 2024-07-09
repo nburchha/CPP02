@@ -6,7 +6,7 @@
 /*   By: nburchha <nburchha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 19:14:08 by nburchha          #+#    #+#             */
-/*   Updated: 2024/07/09 19:55:54 by nburchha         ###   ########.fr       */
+/*   Updated: 2024/07/09 20:00:42 by nburchha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,11 @@ class Fixed
 	public:
 		Fixed();
 		Fixed(const Fixed& copy);
+		Fixed(const int value);
+		Fixed(const float value);
 		~Fixed();
+		float toFloat() const;
+		int toInt() const;
 		Fixed& operator=(const Fixed& other);
 		int getRawBits() const;
 		void setRawBits(int const raw);
