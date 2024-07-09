@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nburchha <nburchha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: niklasburchhardt <niklasburchhardt@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 19:14:08 by nburchha          #+#    #+#             */
-/*   Updated: 2024/07/09 20:00:42 by nburchha         ###   ########.fr       */
+/*   Updated: 2024/07/09 22:13:08 by niklasburch      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,14 @@ class Fixed
 		Fixed(const Fixed& copy);
 		Fixed(const int value);
 		Fixed(const float value);
+		Fixed& operator=(const Fixed& other);
 		~Fixed();
 		float toFloat() const;
 		int toInt() const;
-		Fixed& operator=(const Fixed& other);
 		int getRawBits() const;
 		void setRawBits(int const raw);
 };
+
+std::ostream& operator<<(std::ostream& out, const Fixed& fixed);
 
 #endif
