@@ -6,7 +6,7 @@
 /*   By: niklasburchhardt <niklasburchhardt@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 19:19:59 by nburchha          #+#    #+#             */
-/*   Updated: 2024/07/09 22:25:08 by niklasburch      ###   ########.fr       */
+/*   Updated: 2024/07/12 16:30:42 by niklasburch      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Fixed::Fixed(const Fixed& copy)
 
 Fixed::Fixed(const int value)
 {
-	_value = value;
+	_value = value << fractionalBits;
 	std::cout << "Int constructor called" << std::endl;
 }
 
@@ -59,7 +59,6 @@ std::ostream& operator<<(std::ostream& out, const Fixed& fixed)
 
 float Fixed::toFloat() const
 {
-	std::cout << "toFloat member function called" << std::endl;
 	return static_cast<float>(_value) / (1 << fractionalBits);
 }
 
@@ -71,7 +70,6 @@ int Fixed::toInt() const
 
 int Fixed::getRawBits() const
 {
-	std::cout << "getRawBits member function called" << std::endl;
 	return _value;
 }
 
