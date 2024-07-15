@@ -6,22 +6,28 @@
 /*   By: niklasburchhardt <niklasburchhardt@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 10:51:30 by niklasburch       #+#    #+#             */
-/*   Updated: 2024/07/15 11:55:30 by niklasburch      ###   ########.fr       */
+/*   Updated: 2024/07/15 13:27:08 by niklasburch      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Point.hpp"
 
-int main(void)
-{
-	Point a(0, 0);
-	Point b(0, 1);
-	Point c(1, 0);
-	Point point(0.2, 0.2);
+//https://planetcalc.com/8108/#google_vignette
 
-	if (bsp(a, b, c, point))
-		std::cout << "Point is inside the triangle" << std::endl;
-	else
-		std::cout << "Point is outside the triangle" << std::endl;
-	return 0;
+int main(void) {
+	// Triangle
+	Point a = Point(10, 3);
+	Point b = Point(4, 5);
+	Point c = Point(8, -2);
+
+	Point p1 = Point(5, 4.67f);
+
+	Point p2 = Point(9.5f, 2.5f);
+
+	Point p3 = Point(5.42f, 2.53f);
+
+	std::cout << "Is point 1 on the triangle? " << std::boolalpha << bsp(a, b, c, p1) << std::endl;
+	std::cout << "Is point 2 on the triangle? " << std::boolalpha << bsp(a, b, c, p2) << std::endl;
+	std::cout << "Is point 3 on the triangle? " << std::boolalpha << bsp(a, b, c, p3) << std::endl;
+	return (0);
 }
