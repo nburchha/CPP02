@@ -6,11 +6,10 @@
 /*   By: niklasburchhardt <niklasburchhardt@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 16:33:38 by niklasburch       #+#    #+#             */
-/*   Updated: 2024/07/15 10:48:40 by niklasburch      ###   ########.fr       */
+/*   Updated: 2024/07/15 13:31:26 by niklasburch      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Fixed.hpp"
 
 int main( void )
