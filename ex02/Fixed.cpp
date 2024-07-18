@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niklasburchhardt <niklasburchhardt@stud    +#+  +:+       +#+        */
+/*   By: nburchha <nburchha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 19:19:59 by nburchha          #+#    #+#             */
-/*   Updated: 2024/07/15 13:28:55 by niklasburch      ###   ########.fr       */
+/*   Updated: 2024/07/18 10:40:17 by nburchha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Fixed::Fixed(const int value)
 
 Fixed::Fixed(const float value)
 {
-	_value = round(value * (1 << fractionalBits));
+	_value = roundf(value * (1 << fractionalBits));
 	// std::cout << "Float constructor called" << std::endl;
 }
 
